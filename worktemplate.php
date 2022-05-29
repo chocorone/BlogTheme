@@ -97,6 +97,14 @@ $topName = '作品' ?>
                         <th>配布URL</th>
                         <td><a href="<?php echo $distributeurl ?>"><?php echo $distributeurl ?></a></td>
                     </tr>
+                <?php endif;
+                $giturl =  SCF::get('git-url');
+                if ($giturl != '') :
+                ?>
+                    <tr>
+                        <th>github</th>
+                        <td><a href="<?php echo $giturl ?>"><?php echo $giturl ?></a></td>
+                    </tr>
                 <?php endif; ?>
             </table>
 

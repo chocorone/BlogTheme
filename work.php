@@ -27,8 +27,8 @@ $topName = '作品' ?>
             foreach ($datas as $post) :
                 setup_postdata($post);
             ?>
-                <li class="blog-item" onclick="location.href='<?php the_permalink(); ?>'">
-                    <div class="blog-item__content">
+                <li class="blog-item">
+                    <a class="blog-item__content" href='<?php the_permalink(); ?>'>
                         <div class="blog-item__thumbnail">
                             <?php if (has_post_thumbnail()) : ?>
                                 <img width="300px" class="blog-item__thumbnail-image" src="<?php the_post_thumbnail_url('medium'); ?>">
@@ -39,7 +39,7 @@ $topName = '作品' ?>
 
 
                         <h3 class="blog-item__title"><?php the_title(); ?></h3>
-                    </div>
+                    </a>
                 </li>
 
             <?php
